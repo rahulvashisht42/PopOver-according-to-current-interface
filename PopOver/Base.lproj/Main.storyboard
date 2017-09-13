@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7z6-cU-JrO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PopUp-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopOver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PopUp" id="bcv-Pr-EsK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="794"/>
+        </scene>
+        <!--Pop Over Table View Controller-->
+        <scene sceneID="U5T-Y4-opG">
+            <objects>
+                <tableViewController storyboardIdentifier="popOverMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eba-T4-cmX" customClass="PopOverTableViewController" customModule="PopOver" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="m3j-Ct-xk5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="hmS-vZ-Tkd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hmS-vZ-Tkd" id="yih-LY-8Ae">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eba-T4-cmX" id="0z3-Sy-hQK"/>
+                            <outlet property="delegate" destination="Eba-T4-cmX" id="AXQ-bb-44H"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R6u-1u-AWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1780" y="794"/>
+        </scene>
+        <!--Lert View Controller-->
+        <scene sceneID="pfr-GP-yWk">
+            <objects>
+                <viewController storyboardIdentifier="alertView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3fd-RK-KaE" customClass="ALertViewController" customModule="PopOver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hG4-9H-XZB"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Ak-se-vwm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HW6-7Z-DaE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdq-9y-ZbD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPE-g6-pbT">
+                                <rect key="frame" x="16" y="269" width="343" height="128"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E9i-6X-ZHw">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="alert" id="Z8b-dU-TSQ">
+                                                <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z8b-dU-TSQ" id="fTV-qa-r09">
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="3fd-RK-KaE" id="68X-MA-Ujk"/>
+                                            <outlet property="delegate" destination="3fd-RK-KaE" id="u8e-Q5-5VL"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="E9i-6X-ZHw" firstAttribute="leading" secondItem="EPE-g6-pbT" secondAttribute="leading" id="Jn5-8b-VAI"/>
+                                    <constraint firstAttribute="bottom" secondItem="E9i-6X-ZHw" secondAttribute="bottom" id="OIT-KF-Gbu"/>
+                                    <constraint firstAttribute="trailing" secondItem="E9i-6X-ZHw" secondAttribute="trailing" id="aq6-kM-Rll"/>
+                                    <constraint firstItem="E9i-6X-ZHw" firstAttribute="top" secondItem="EPE-g6-pbT" secondAttribute="top" id="i0q-QQ-b9l"/>
+                                    <constraint firstAttribute="height" constant="128" id="ycs-aX-ab6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EPE-g6-pbT" firstAttribute="leading" secondItem="HW6-7Z-DaE" secondAttribute="leading" constant="16" id="250-gE-khf"/>
+                            <constraint firstAttribute="trailing" secondItem="Hdq-9y-ZbD" secondAttribute="trailing" id="EG0-YR-xZg"/>
+                            <constraint firstItem="8Ak-se-vwm" firstAttribute="top" secondItem="Hdq-9y-ZbD" secondAttribute="bottom" id="OEy-Wv-Yud"/>
+                            <constraint firstItem="Hdq-9y-ZbD" firstAttribute="top" secondItem="hG4-9H-XZB" secondAttribute="bottom" id="Xbo-4R-94K"/>
+                            <constraint firstItem="Hdq-9y-ZbD" firstAttribute="leading" secondItem="HW6-7Z-DaE" secondAttribute="leading" id="agZ-Td-Iwb"/>
+                            <constraint firstItem="EPE-g6-pbT" firstAttribute="centerX" secondItem="HW6-7Z-DaE" secondAttribute="centerX" id="k2e-K1-WwQ"/>
+                            <constraint firstItem="EPE-g6-pbT" firstAttribute="centerY" secondItem="HW6-7Z-DaE" secondAttribute="centerY" id="ury-jz-GD2"/>
+                            <constraint firstAttribute="trailing" secondItem="EPE-g6-pbT" secondAttribute="trailing" constant="16" id="yc0-1V-qQI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertHeight" destination="ycs-aX-ab6" id="GrE-5a-aRp"/>
+                        <outlet property="tableView" destination="E9i-6X-ZHw" id="ing-rE-5Zk"/>
+                        <outlet property="viewHide" destination="Hdq-9y-ZbD" id="jaL-P0-JFz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBv-Py-LKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2550" y="794"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mts-2n-D80">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7z6-cU-JrO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UXb-Wf-4jo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P2i-bs-mC2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4kl-ln-1JT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.80000000000001" y="793.8530734632684"/>
+        </scene>
+    </scenes>
+</document>
